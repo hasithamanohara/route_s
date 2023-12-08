@@ -1,28 +1,38 @@
 import React from "react";
 
-const name = "hasitha";
-const age = "25";
-const city = "tanamalwila";
+const myObj = [
+  {
+    name: "hasitha",
+    age: "25",
+    city: "tanamalwila",
+  },
+  {
+    name: "manohara",
+    age: "20",
+    city: "tissa",
+  },
+];
 
-const user = {
-  name: `${name}`,
-  age: `${age}`,
-  city: `${city}`,
-};
-
-function Main(props) {
-    const {fname, ncity, oage} = props;
-    const { city } = user;
+function Main(children) {
+  const { fname, ncity, oage } = children;
   return (
-    <div>
-      <p>{user.name}</p>
-      <p>{user.age}</p>
-      <p>{city} this is from object destructuring </p>
-      <p>this is a main component</p>
-      <p>{fname}</p>
-      <p>{ncity}</p>
-      <p>{oage}</p>
-    </div>
+    <>
+      <div>
+        <p>this is a main component</p>
+        <p>{fname}</p>
+        <p>{ncity}</p>
+        <p>{oage}</p>
+      </div>
+      {myObj.map((ele) => {
+        return (
+          <>
+            <p>{ele.name}</p>
+            <p>{ele.age}</p>
+            <p>{ele.city}</p>
+          </>
+        );
+      })}
+    </>
   );
 }
 

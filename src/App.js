@@ -4,10 +4,7 @@ import Main from "./Components/Main";
 function App() {
   return (
     <div>
-      <Main fname="hasith" ncity="tanamalwila" oage="20" />
-      <Main>
-        <p>hasitha this is a children</p>
-      </Main>
+      <Main fname="seka" ncity="tissamaharama" oage="20" />
     </div>
   );
 }
