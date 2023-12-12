@@ -20,15 +20,15 @@ function App() {
   });
 
   return (
-    <Fragment>
+    <div>
+      <div className="Datablock2_container">{Datablock2}</div>
       <div>
-        {MyData.map(({ name, city }, index) => {
-          return <Main key={index} name={name} city={city} />;
+        {MyData.map(({ name, city, image }, index) => {
+          return <Main key={index} image={image} name={name} city={city} />;
         })}
       </div>
       <DataBlock />
-      {Datablock2}
-    </Fragment>
+    </div>
   );
 }
 
